@@ -1,37 +1,43 @@
 <template>
 	<v-app>
-		<v-row>
-			<v-col xs12 sm10 offset-sm1>
-				<v-card class="mt-4">
-					<v-card-row class="grey darken-4">
-						<v-card-title>
-							<span class="white--text">CIFRA DE CÉSAR</span>
-						</v-card-title>
-					</v-card-row>
-					<v-card-row>
-						<v-card-text class="grey lighten-4">
-							<v-text-field v-model="decriptado" @input="encode" multi-line label="Texto decriptado"></v-text-field>
-							<v-text-field v-model="encriptado" @input="decode" multi-line label="Texto encriptado"></v-text-field>
-						</v-card-text>
-					</v-card-row>
-					<v-card-row actions class="grey darken-2">
-						<v-menu transition="v-slide-y-transition" max-height="250">
-							<v-btn slot="activator" class="accent white--text">
-								Chave: {{chave}}
-							</v-btn>
-							<v-list>
-								<v-list-item v-for="n in 26" :key="n" @click="setarChave(n)">
-									<v-list-tile>
-										<v-list-tile-title>{{n}}</v-list-tile-title>
-									</v-list-tile>
-								</v-list-item>
-							</v-list>
-						</v-menu>
-						<v-spacer></v-spacer>
-					</v-card-row>
-				</v-card>
-			</v-col>
-		</v-row>
+		<main>
+			<v-content>
+				<v-container fluid>
+					<v-row>
+						<v-col xs12 sm10 md6 offset-sm1 offset-md3>
+							<v-card class="mt-4 mb-4 ml-4 mr-4 cartao" fluid>
+								<v-card-row class="grey darken-4">
+									<v-card-title>
+										<span class="white--text">CIFRA DE CÉSAR</span>
+									</v-card-title>
+								</v-card-row>
+								<v-card-row>
+									<v-card-text class="grey lighten-4">
+										<v-text-field v-model="decriptado" @input="encode" multi-line label="Texto decriptado"></v-text-field>
+										<v-text-field v-model="encriptado" @input="decode" multi-line label="Texto encriptado"></v-text-field>
+									</v-card-text>
+								</v-card-row>
+								<v-card-row actions class="grey darken-2">
+									<v-menu transition="v-slide-y-transition" max-height="250">
+										<v-btn slot="activator" class="accent white--text">
+											Chave: {{chave}}
+										</v-btn>
+										<v-list>
+											<v-list-item v-for="n in 26" :key="n" @click="setarChave(n)">
+												<v-list-tile>
+													<v-list-tile-title>{{n}}</v-list-tile-title>
+												</v-list-tile>
+											</v-list-item>
+										</v-list>
+									</v-menu>
+									<v-spacer></v-spacer>
+								</v-card-row>
+							</v-card>
+						</v-col>
+					</v-row>
+				</v-container>
+			</v-content>
+		</main>
 	</v-app>
 </template>
 
@@ -86,4 +92,7 @@ export default {
 
 <style lang="stylus">
 @import '../node_modules/vuetify/src/stylus/main'
+.cartao{
+	max-width: 630px;
+}
 </style>

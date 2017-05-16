@@ -5,7 +5,7 @@
 				<v-container fluid>
 					<v-row>
 						<v-col xs12 sm10 md6 offset-sm1 offset-md3>
-							<v-card class="mt-4 mb-4 ml-4 mr-4 cartao" fluid>
+							<v-card class="mt-4 mb-4 ml-4 mr-4 elevation-10 cartao" fluid>
 								<v-card-row class="grey darken-4">
 									<v-card-title>
 										<span class="white--text">CIFRA DE CÉSAR</span>
@@ -18,8 +18,8 @@
 									</v-card-text>
 								</v-card-row>
 								<v-card-row actions class="grey darken-2">
-									<v-menu transition="v-slide-y-transition" max-height="250">
-										<v-btn slot="activator" class="accent white--text">
+									<v-menu transition="v-slide-y-transition" max-height="250" class="elevation-10">
+										<v-btn slot="activator" class="accent white--text elevation-10">
 											Chave: {{chave}}
 										</v-btn>
 										<v-list>

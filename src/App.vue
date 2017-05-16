@@ -5,7 +5,7 @@
 				<v-card class="mt-4">
 					<v-card-row class="grey darken-4">
 						<v-card-title>
-							<span class="white--text">CIFRA DE CESAR</span>
+							<span class="white--text">CIFRA DE CÉSAR</span>
 						</v-card-title>
 					</v-card-row>
 					<v-card-row>
